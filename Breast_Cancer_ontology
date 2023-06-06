@@ -1,0 +1,1845 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/ontology#> .
+
+### Classes ###
+:CancerPatient a owl:Class ;
+    rdfs:label "CancerPatient" .
+
+:Tumor a owl:Class ;
+    rdfs:label "Tumor" .
+
+:FamilyHistory a owl:Class ;
+    rdfs:label "FamilyHistory" .
+
+:Diagnosis a owl:Class ;
+    rdfs:label "Diagnosis" .
+
+:Symptom a owl:Class ;
+    rdfs:label "Symptom" .
+
+:Treatment a owl:Class ;
+    rdfs:label "Treatment" .
+
+:Chemotherapy a owl:Class ;
+    rdfs:label "Chemotherapy" .
+
+:RadiationTherapy a owl:Class ;
+    rdfs:label "RadiationTherapy" .
+
+:Surgery a owl:Class ;
+    rdfs:label "Surgery" .
+
+:PalliativeCare a owl:Class ;
+    rdfs:label "PalliativeCare" .
+
+:ClinicalTrial a owl:Class ;
+    rdfs:label "ClinicalTrial" .
+
+:GeneticTesting a owl:Class ;
+    rdfs:label "GeneticTesting" .
+
+:Biomarker a owl:Class ;
+    rdfs:label "Biomarker" .
+
+:Prognosis a owl:Class ;
+    rdfs:label "Prognosis" .
+
+:PathologyReport a owl:Class ;
+    rdfs:label "PathologyReport" .
+
+:MedicalImage a owl:Class ;
+    rdfs:label "MedicalImage" .
+
+:Oncologist a owl:Class ;
+    rdfs:label "Oncologist" .
+
+:Radiologist a owl:Class ;
+    rdfs:label "Radiologist" .
+
+:Pathologist a owl:Class ;
+    rdfs:label "Pathologist" .
+
+:Nurse a owl:Class ;
+    rdfs:label "Nurse" .
+
+:SupportGroup a owl:Class ;
+    rdfs:label "SupportGroup" .
+
+:HealthInsurance a owl:Class ;
+    rdfs:label "HealthInsurance" .
+
+:PalliativeCareSpecialist a owl:Class ;
+    rdfs:label "PalliativeCareSpecialist" .
+
+:ResearchStudy a owl:Class ;
+    rdfs:label "ResearchStudy" .
+
+:MedicalDevice a owl:Class ;
+    rdfs:label "MedicalDevice" .
+
+:ClinicalGuideline a owl:Class ;
+    rdfs:label "ClinicalGuideline" .
+
+:Rehabilitation a owl:Class ;
+    rdfs:label "Rehabilitation" .
+
+:Screening a owl:Class ;
+    rdfs:label "Screening" .
+
+:FollowUp a owl:Class ;
+    rdfs:label "FollowUp" .
+
+:SideEffect a owl:Class ;
+    rdfs:label "SideEffect" .
+
+:LifestyleModification a owl:Class ;
+    rdfs:label "LifestyleModification" .
+
+:PalliativeCarePlan a owl:Class ;
+    rdfs:label "PalliativeCarePlan" .
+
+:PalliativeCareTeam a owl:Class ;
+    rdfs:label "PalliativeCareTeam" .
+
+:Caregiver a owl:Class ;
+    rdfs:label "Caregiver" .
+
+:SurvivorshipProgram a owl:Class ;
+    rdfs:label "SurvivorshipProgram" .
+
+:IntegrativeTherapy a owl:Class ;
+    rdfs:label "IntegrativeTherapy" .
+
+:PainManagement a owl:Class ;
+    rdfs:label "PainManagement" .
+
+:Nutritionist a owl:Class ;
+    rdfs:label "Nutritionist" .
+
+:GeneticCounseling a owl:Class ;
+    rdfs:label "GeneticCounseling" .
+
+:Psychotherapy a owl:Class ;
+    rdfs:label "Psychotherapy" .
+
+:SocialWorker a owl:Class ;
+    rdfs:label "SocialWorker" .
+
+:PatientAdvocate a owl:Class ;
+    rdfs:label "PatientAdvocate" .
+
+:RiskFactor a owl:Class ;
+    rdfs:label "RiskFactor" .
+
+:EnvironmentalFactor a owl:Class ;
+    rdfs:label "EnvironmentalFactor" .
+
+:CancerStage a owl:Class ;
+    rdfs:label "CancerStage" .
+
+:Metastasis a owl:Class ;
+    rdfs:label "Metastasis" .
+
+:Recurrence a owl:Class ;
+    rdfs:label "Recurrence" .
+
+:Comorbidity a owl:Class ;
+    rdfs:label "Comorbidity" .
+
+:PalliativeCareFacility a owl:Class ;
+    rdfs:label "PalliativeCareFacility" .
+
+:ClinicalTrialsRegistry a owl:Class ;
+    rdfs:label "ClinicalTrialsRegistry" .
+
+
+
+### Properties ###
+:hasName a owl:DatatypeProperty ;
+    rdfs:label "hasName" .
+
+:hasAge a owl:DatatypeProperty ;
+    rdfs:label "hasAge" .
+
+:hasGender a owl:DatatypeProperty ;
+    rdfs:label "hasGender" .
+
+:hasAddress a owl:DatatypeProperty ;
+    rdfs:label "hasAddress" .
+
+:hasPhoneNumber a owl:DatatypeProperty ;
+    rdfs:label "hasPhoneNumber" .
+
+:hasEmail a owl:DatatypeProperty ;
+    rdfs:label "hasEmail" .
+
+:hasDateOfBirth a owl:DatatypeProperty ;
+    rdfs:label "hasDateOfBirth" .
+
+:hasBloodType a owl:DatatypeProperty ;
+    rdfs:label "hasBloodType" .
+
+:hasWeight a owl:DatatypeProperty ;
+    rdfs:label "hasWeight" .
+
+:hasHeight a owl:DatatypeProperty ;
+    rdfs:label "hasHeight" .
+
+:hasBMI a owl:DatatypeProperty ;
+    rdfs:label "hasBMI" .
+
+:hasSmokingHistory a owl:DatatypeProperty ;
+    rdfs:label "hasSmokingHistory" .
+
+:hasAlcoholConsumption a owl:DatatypeProperty ;
+    rdfs:label "hasAlcoholConsumption" .
+
+:hasDrugAllergies a owl:DatatypeProperty ;
+    rdfs:label "hasDrugAllergies" .
+
+:hasMedicalHistory a owl:DatatypeProperty ;
+    rdfs:label "hasMedicalHistory" .
+
+:hasMedicationHistory a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationHistory" .
+
+:hasFamilyHistory a owl:DatatypeProperty ;
+    rdfs:label "hasFamilyHistory" .
+
+:hasPrimaryPhysician a owl:DatatypeProperty ;
+    rdfs:label "hasPrimaryPhysician" .
+
+:hasReferringPhysician a owl:DatatypeProperty ;
+    rdfs:label "hasReferringPhysician" .
+
+:hasPathologist a owl:DatatypeProperty ;
+    rdfs:label "hasPathologist" .
+
+:hasRadiologist a owl:DatatypeProperty ;
+    rdfs:label "hasRadiologist" .
+
+:hasOncologist a owl:DatatypeProperty ;
+    rdfs:label "hasOncologist" .
+
+:hasSurgicalOncologist a owl:DatatypeProperty ;
+    rdfs:label "hasSurgicalOncologist" .
+
+:hasRadiationOncologist a owl:DatatypeProperty ;
+    rdfs:label "hasRadiationOncologist" .
+
+:hasNurseSpecialist a owl:DatatypeProperty ;
+    rdfs:label "hasNurseSpecialist" .
+
+:hasSocialWorker a owl:DatatypeProperty ;
+    rdfs:label "hasSocialWorker" .
+
+:hasNutritionist a owl:DatatypeProperty ;
+    rdfs:label "hasNutritionist" .
+
+:hasGeneticCounselor a owl:DatatypeProperty ;
+    rdfs:label "hasGeneticCounselor" .
+
+:hasPainLevel a owl:DatatypeProperty ;
+    rdfs:label "hasPainLevel" .
+
+:hasSymptomSeverity a owl:DatatypeProperty ;
+    rdfs:label "hasSymptomSeverity" .
+
+:hasDiagnosisDate a owl:DatatypeProperty ;
+    rdfs:label "hasDiagnosisDate" .
+
+:hasPrimaryDiagnosis a owl:DatatypeProperty ;
+    rdfs:label "hasPrimaryDiagnosis" .
+
+:hasSecondaryDiagnosis a owl:DatatypeProperty ;
+    rdfs:label "hasSecondaryDiagnosis" .
+
+:hasTumorType a owl:DatatypeProperty ;
+    rdfs:label "hasTumorType" .
+
+:hasTumorSize a owl:DatatypeProperty ;
+    rdfs:label "hasTumorSize" .
+
+:hasTumorGrade a owl:DatatypeProperty ;
+    rdfs:label "hasTumorGrade" .
+
+:hasTumorLocation a owl:DatatypeProperty ;
+    rdfs:label "hasTumorLocation" .
+
+:hasLymphNodeInvolvement a owl:DatatypeProperty ;
+    rdfs:label "hasLymphNodeInvolvement" .
+
+:hasMetastasisLocation a owl:DatatypeProperty ;
+    rdfs:label "hasMetastasisLocation" .
+
+:hasTreatmentPlan a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentPlan" .
+
+:hasTreatmentStartDate a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentStartDate" .
+
+:hasTreatmentEndDate a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentEndDate" .
+
+:hasChemotherapyRegimen a owl:DatatypeProperty ;
+    rdfs:label "hasChemotherapyRegimen" .
+
+:hasRadiationDose a owl:DatatypeProperty ;
+    rdfs:label "hasRadiationDose" .
+
+:hasSurgeryType a owl:DatatypeProperty ;
+    rdfs:label "hasSurgeryType" .
+
+:hasSurgicalProcedureDate a owl:DatatypeProperty ;
+    rdfs:label "hasSurgicalProcedureDate" .
+
+:hasPostoperativeComplications a owl:DatatypeProperty ;
+    rdfs:label "hasPostoperativeComplications" .
+
+:hasPalliativeCarePlan a owl:DatatypeProperty ;
+    rdfs:label "hasPalliativeCarePlan" .
+
+:hasClinicalTrialParticipation a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialParticipation" .
+
+:hasClinicalTrialIdentifier a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialIdentifier" .
+
+:hasBiomarkerTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasBiomarkerTestResult" .
+
+:hasGeneticTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasGeneticTestResult" .
+
+:hasPrognosis a owl:DatatypeProperty ;
+    rdfs:label "hasPrognosis" .
+
+:hasFollowUpAppointment a owl:DatatypeProperty ;
+    rdfs:label "hasFollowUpAppointment" .
+
+:hasRecurrenceStatus a owl:DatatypeProperty ;
+    rdfs:label "hasRecurrenceStatus" .
+
+:hasMetastasisStatus a owl:DatatypeProperty ;
+    rdfs:label "hasMetastasisStatus" .
+
+:hasSurvivalRate a owl:DatatypeProperty ;
+    rdfs:label "hasSurvivalRate" .
+
+:hasPalliativeCareProvider a owl:DatatypeProperty ;
+    rdfs:label "hasPalliativeCareProvider" .
+
+:hasSupportGroupMeetingDate a owl:DatatypeProperty ;
+    rdfs:label "hasSupportGroupMeetingDate" .
+
+:hasInsuranceProvider a owl:DatatypeProperty ;
+    rdfs:label "hasInsuranceProvider" .
+
+:hasInsurancePolicyNumber a owl:DatatypeProperty ;
+    rdfs:label "hasInsurancePolicyNumber" .
+
+:hasRehabilitationProgram a owl:DatatypeProperty ;
+    rdfs:label "hasRehabilitationProgram" .
+
+:hasScreeningTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasScreeningTestResult" .
+
+:hasSideEffectSeverity a owl:DatatypeProperty ;
+    rdfs:label "hasSideEffectSeverity" .
+
+:hasSideEffectManagementStrategy a owl:DatatypeProperty ;
+    rdfs:label "hasSideEffectManagementStrategy" .
+
+:hasDietaryRestrictions a owl:DatatypeProperty ;
+    rdfs:label "hasDietaryRestrictions" .
+
+:hasExerciseRoutine a owl:DatatypeProperty ;
+    rdfs:label "hasExerciseRoutine" .
+
+:hasEmotionalSupport a owl:DatatypeProperty ;
+    rdfs:label "hasEmotionalSupport" .
+
+:hasFinancialAssistance a owl:DatatypeProperty ;
+    rdfs:label "hasFinancialAssistance" .
+
+:hasRiskFactor a owl:DatatypeProperty ;
+    rdfs:label "hasRiskFactor" .
+
+:hasExposureToCarcinogens a owl:DatatypeProperty ;
+    rdfs:label "hasExposureToCarcinogens" .
+
+:hasEnvironmentalPollutionLevel a owl:DatatypeProperty ;
+    rdfs:label "hasEnvironmentalPollutionLevel" .
+
+:hasCancerStage a owl:DatatypeProperty ;
+    rdfs:label "hasCancerStage" .
+
+:hasTNMClassification a owl:DatatypeProperty ;
+    rdfs:label "hasTNMClassification" .
+
+:hasRecurrenceRisk a owl:DatatypeProperty ;
+    rdfs:label "hasRecurrenceRisk" .
+
+:hasComorbidity a owl:DatatypeProperty ;
+    rdfs:label "hasComorbidity" .
+
+:hasPainManagementPlan a owl:DatatypeProperty ;
+    rdfs:label "hasPainManagementPlan" .
+
+:hasMedicationSchedule a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationSchedule" .
+
+:hasPhysicalTherapyPlan a owl:DatatypeProperty ;
+    rdfs:label "hasPhysicalTherapyPlan" .
+
+:hasPsychotherapySession a owl:DatatypeProperty ;
+    rdfs:label "hasPsychotherapySession" .
+
+:hasHospiceCareProvider a owl:DatatypeProperty ;
+    rdfs:label "hasHospiceCareProvider" .
+
+:hasDiseaseProgression a owl:DatatypeProperty ;
+    rdfs:label "hasDiseaseProgression" .
+
+:hasClinicalTrialsEnrollmentStatus a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialsEnrollmentStatus" .
+
+:hasDrugInteractions a owl:DatatypeProperty ;
+    rdfs:label "hasDrugInteractions" .
+
+:hasMedicationAdherence a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationAdherence" .
+
+:hasAppointmentReminder a owl:DatatypeProperty ;
+    rdfs:label "hasAppointmentReminder" .
+
+:hasPatientEducationResource a owl:DatatypeProperty ;
+    rdfs:label "hasPatientEducationResource" .
+
+:hasResearchStudyParticipation a owl:DatatypeProperty ;
+    rdfs:label "hasResearchStudyParticipation" .
+
+:hasBiopsyResult a owl:DatatypeProperty ;
+    rdfs:label "hasBiopsyResult" .
+
+:hasSurvivorshipPlan a owl:DatatypeProperty ;
+    rdfs:label "hasSurvivorshipPlan" .
+
+:hasAlternativeTherapy a owl:DatatypeProperty ;
+    rdfs:label "hasAlternativeTherapy" .
+
+:hasExerciseRecommendation a owl:DatatypeProperty ;
+    rdfs:label "hasExerciseRecommendation" .
+
+:hasTreatmentResponse a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentResponse" .
+
+:hasClinicalOutcome a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalOutcome" .
+
+:hasCancerSupportProgram a owl:DatatypeProperty ;
+    rdfs:label "hasCancerSupportProgram" .
+
+:hasHealthcareProxy a owl:DatatypeProperty ;
+    rdfs:label "hasHealthcareProxy" .
+
+:hasAdvanceDirective a owl:DatatypeProperty ;
+    rdfs:label "hasAdvanceDirective" .
+
+:hasPatientSatisfactionScore a owl:DatatypeProperty ;
+    rdfs:label "hasPatientSatisfactionScore" .
+
+:hasCaregiverRole a owl:DatatypeProperty ;
+    rdfs:label "hasCaregiverRole" .
+
+:hasPatientAdvocate a owl:DatatypeProperty ;
+    rdfs:label "hasPatientAdvocate" .
+
+
+
+### Object Properties ###
+:hasClinicalGuideline a owl:ObjectProperty ;
+    rdfs:label "hasClinicalGuideline" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :ClinicalGuideline .
+
+:hasMedicalImage a owl:ObjectProperty ;
+    rdfs:label "hasMedicalImage" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :MedicalImage .
+
+:hasSupportGroup a owl:ObjectProperty ;
+    rdfs:label "hasSupportGroup" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :SupportGroup .
+
+:hasHealthInsurance a owl:ObjectProperty ;
+    rdfs:label "hasHealthInsurance" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :HealthInsurance .
+
+:hasPalliativeCareSpecialist a owl:ObjectProperty ;
+    rdfs:label "hasPalliativeCareSpecialist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareSpecialist .
+
+:hasResearchStudy a owl:ObjectProperty ;
+    rdfs:label "hasResearchStudy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :ResearchStudy .
+
+:hasMedicalDevice a owl:ObjectProperty ;
+    rdfs:label "hasMedicalDevice" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :MedicalDevice .
+
+:hasClinicalGuideline a owl:ObjectProperty ;
+    rdfs:label "hasClinicalGuideline" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :ClinicalGuideline .
+
+:hasRehabilitation a owl:ObjectProperty ;
+    rdfs:label "hasRehabilitation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Rehabilitation .
+
+:hasScreening a owl:ObjectProperty ;
+    rdfs:label "hasScreening" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Screening .
+
+:hasFollowUp a owl:ObjectProperty ;
+    rdfs:label "hasFollowUp" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :FollowUp .
+
+:hasSideEffect a owl:ObjectProperty ;
+    rdfs:label "hasSideEffect" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :SideEffect .
+
+:hasLifestyleModification a owl:ObjectProperty ;
+    rdfs:label "hasLifestyleModification" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :LifestyleModification .
+
+:hasPalliativeCarePlan a owl:ObjectProperty ;
+    rdfs:label "hasPalliativeCarePlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCarePlan .
+
+:hasPalliativeCareTeam a owl:ObjectProperty ;
+    rdfs:label "hasPalliativeCareTeam" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareTeam .
+
+:hasCaregiver a owl:ObjectProperty ;
+    rdfs:label "hasCaregiver" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Caregiver .
+
+:hasSurvivorshipProgram a owl:ObjectProperty ;
+    rdfs:label "hasSurvivorshipProgram" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :SurvivorshipProgram .
+
+:hasIntegrativeTherapy a owl:ObjectProperty ;
+    rdfs:label "hasIntegrativeTherapy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :IntegrativeTherapy .
+
+:hasPainManagement a owl:ObjectProperty ;
+    rdfs:label "hasPainManagement" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PainManagement .
+
+:hasNutritionist a owl:ObjectProperty ;
+    rdfs:label "hasNutritionist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Nutritionist .
+
+:hasGeneticCounseling a owl:ObjectProperty ;
+    rdfs:label "hasGeneticCounseling" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :GeneticCounseling .
+
+:hasPsychotherapy a owl:ObjectProperty ;
+    rdfs:label "hasPsychotherapy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Psychotherapy .
+
+:hasSocialWorker a owl:ObjectProperty ;
+    rdfs:label "hasSocialWorker" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :SocialWorker .
+
+:hasPatientAdvocate a owl:ObjectProperty ;
+    rdfs:label "hasPatientAdvocate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PatientAdvocate .
+
+:hasRiskFactor a owl:ObjectProperty ;
+    rdfs:label "hasRiskFactor" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :RiskFactor .
+
+:hasEnvironmentalFactor a owl:ObjectProperty ;
+    rdfs:label "hasEnvironmentalFactor" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :EnvironmentalFactor .
+
+:hasCancerStage a owl:ObjectProperty ;
+    rdfs:label "hasCancerStage" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :CancerStage .
+
+:hasMetastasis a owl:ObjectProperty ;
+    rdfs:label "hasMetastasis" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Metastasis .
+
+:hasRecurrence a owl:ObjectProperty ;
+    rdfs:label "hasRecurrence" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Recurrence .
+
+:hasComorbidity a owl:ObjectProperty ;
+    rdfs:label "hasComorbidity" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Comorbidity .
+
+:hasPalliativeCareFacility a owl:ObjectProperty ;
+    rdfs:label "hasPalliativeCareFacility" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareFacility .
+
+:hasClinicalTrialsRegistry a owl:ObjectProperty ;
+    rdfs:label "hasClinicalTrialsRegistry" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :ClinicalTrialsRegistry .
+
+:hasName a owl:DatatypeProperty ;
+    rdfs:label "hasName" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAge a owl:DatatypeProperty ;
+    rdfs:label "hasAge" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:integer .
+
+:hasGender a owl:DatatypeProperty ;
+    rdfs:label "hasGender" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAddress a owl:DatatypeProperty ;
+    rdfs:label "hasAddress" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPhoneNumber a owl:DatatypeProperty ;
+    rdfs:label "hasPhoneNumber" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasEmail a owl:DatatypeProperty ;
+    rdfs:label "hasEmail" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDateOfBirth a owl:DatatypeProperty ;
+    rdfs:label "hasDateOfBirth" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasBloodType a owl:DatatypeProperty ;
+    rdfs:label "hasBloodType" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasWeight a owl:DatatypeProperty ;
+    rdfs:label "hasWeight" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:decimal .
+
+:hasHeight a owl:DatatypeProperty ;
+    rdfs:label "hasHeight" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:decimal .
+
+:hasBMI a owl:DatatypeProperty ;
+    rdfs:label "hasBMI" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:decimal .
+
+:hasSmokingHistory a owl:DatatypeProperty ;
+    rdfs:label "hasSmokingHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAlcoholConsumption a owl:DatatypeProperty ;
+    rdfs:label "hasAlcoholConsumption" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDrugAllergies a owl:DatatypeProperty ;
+    rdfs:label "hasDrugAllergies" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMedicalHistory a owl:DatatypeProperty ;
+    rdfs:label "hasMedicalHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMedicationHistory a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasFamilyHistory a owl:DatatypeProperty ;
+    rdfs:label "hasFamilyHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPrimaryPhysician a owl:ObjectProperty ;
+    rdfs:label "hasPrimaryPhysician" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasReferringPhysician a owl:ObjectProperty ;
+    rdfs:label "hasReferringPhysician" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasPathologist a owl:ObjectProperty ;
+    rdfs:label "hasPathologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Pathologist .
+
+:hasRadiologist a owl:ObjectProperty ;
+    rdfs:label "hasRadiologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Radiologist .
+
+:hasOncologist a owl:ObjectProperty ;
+    rdfs:label "hasOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasSurgicalOncologist a owl:ObjectProperty ;
+    rdfs:label "hasSurgicalOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasRadiationOncologist a owl:ObjectProperty ;
+    rdfs:label "hasRadiationOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasNurseSpecialist a owl:ObjectProperty ;
+    rdfs:label "hasNurseSpecialist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Nurse .
+
+:hasSocialWorker a owl:ObjectProperty ;
+    rdfs:label "hasSocialWorker" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :SocialWorker .
+
+:hasNutritionist a owl:ObjectProperty ;
+    rdfs:label "hasNutritionist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Nutritionist .
+
+:hasGeneticCounselor a owl:ObjectProperty ;
+    rdfs:label "hasGeneticCounselor" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :GeneticCounselor .
+
+:hasPainLevel a owl:DatatypeProperty ;
+    rdfs:label "hasPainLevel" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSymptomSeverity a owl:DatatypeProperty ;
+    rdfs:label "hasSymptomSeverity" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDiagnosisDate a owl:DatatypeProperty ;
+    rdfs:label "hasDiagnosisDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasPrimaryDiagnosis a owl:DatatypeProperty ;
+    rdfs:label "hasPrimaryDiagnosis" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSecondaryDiagnosis a owl:DatatypeProperty ;
+    rdfs:label "hasSecondaryDiagnosis" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorType a owl:DatatypeProperty ;
+    rdfs:label "hasTumorType" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorSize a owl:DatatypeProperty ;
+    rdfs:label "hasTumorSize" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorGrade a owl:DatatypeProperty ;
+    rdfs:label "hasTumorGrade" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorLocation a owl:DatatypeProperty ;
+    rdfs:label "hasTumorLocation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasLymphNodeInvolvement a owl:DatatypeProperty ;
+    rdfs:label "hasLymphNodeInvolvement" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMetastasisLocation a owl:DatatypeProperty ;
+    rdfs:label "hasMetastasisLocation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTreatmentPlan a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTreatmentStartDate a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentStartDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasTreatmentEndDate a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentEndDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasChemotherapyRegimen a owl:DatatypeProperty ;
+    rdfs:label "hasChemotherapyRegimen" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasRadiationDose a owl:DatatypeProperty ;
+    rdfs:label "hasRadiationDose" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurgeryType a owl:DatatypeProperty ;
+    rdfs:label "hasSurgeryType" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurgicalProcedureDate a owl:DatatypeProperty ;
+    rdfs:label "hasSurgicalProcedureDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasPostoperativeComplications a owl:DatatypeProperty ;
+    rdfs:label "hasPostoperativeComplications" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPalliativeCarePlan a owl:DatatypeProperty ;
+    rdfs:label "hasPalliativeCarePlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasClinicalTrialParticipation a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialParticipation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:boolean .
+
+:hasClinicalTrialIdentifier a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialIdentifier" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasBiomarkerTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasBiomarkerTestResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasGeneticTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasGeneticTestResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPrognosis a owl:DatatypeProperty ;
+    rdfs:label "hasPrognosis" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasFollowUpAppointment a owl:DatatypeProperty ;
+    rdfs:label "hasFollowUpAppointment" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasRecurrenceStatus a owl:DatatypeProperty ;
+    rdfs:label "hasRecurrenceStatus" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMetastasisStatus a owl:DatatypeProperty ;
+    rdfs:label "hasMetastasisStatus" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurvivalRate a owl:DatatypeProperty ;
+    rdfs:label "hasSurvivalRate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPalliativeCareProvider a owl:ObjectProperty ;
+    rdfs:label "hasPalliativeCareProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareSpecialist .
+
+:hasSupportGroupMeetingDate a owl:DatatypeProperty ;
+    rdfs:label "hasSupportGroupMeetingDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasInsuranceProvider a owl:DatatypeProperty ;
+    rdfs:label "hasInsuranceProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasInsurancePolicyNumber a owl:DatatypeProperty ;
+    rdfs:label "hasInsurancePolicyNumber" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasRehabilitationProgram a owl:DatatypeProperty ;
+    rdfs:label "hasRehabilitationProgram" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasScreeningTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasScreeningTestResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSideEffectSeverity a owl:DatatypeProperty ;
+    rdfs:label "hasSideEffectSeverity" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSideEffectManagementStrategy a owl:DatatypeProperty ;
+    rdfs:label "hasSideEffectManagementStrategy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDietaryRestrictions a owl:DatatypeProperty ;
+    rdfs:label "hasDietaryRestrictions" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasExerciseRoutine a owl:DatatypeProperty ;
+    rdfs:label "hasExerciseRoutine" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasEmotionalSupport a owl:DatatypeProperty ;
+    rdfs:label "hasEmotionalSupport" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasFinancialAssistance a owl:DatatypeProperty ;
+    rdfs:label "hasFinancialAssistance" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasRiskFactor a owl:DatatypeProperty ;
+    rdfs:label "hasRiskFactor" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasExposureToCarcinogens a owl:DatatypeProperty ;
+    rdfs:label "hasExposureToCarcinogens" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasCancerStage a owl:DatatypeProperty ;
+    rdfs:label "hasCancerStage" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTNMClassification a owl:DatatypeProperty ;
+    rdfs:label "hasTNMClassification" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasRecurrenceRisk a owl:DatatypeProperty ;
+    rdfs:label "hasRecurrenceRisk" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasComorbidity a owl:DatatypeProperty ;
+    rdfs:label "hasComorbidity" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPainManagementPlan a owl:DatatypeProperty ;
+    rdfs:label "hasPainManagementPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMedicationSchedule a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationSchedule" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPhysicalTherapyPlan a owl:DatatypeProperty ;
+    rdfs:label "hasPhysicalTherapyPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPsychotherapySession a owl:DatatypeProperty ;
+    rdfs:label "hasPsychotherapySession" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasHospiceCareProvider a owl:ObjectProperty ;
+    rdfs:label "hasHospiceCareProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareSpecialist .
+
+:hasDiseaseProgression a owl:DatatypeProperty ;
+    rdfs:label "hasDiseaseProgression" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasClinicalTrialsEnrollmentStatus a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialsEnrollmentStatus" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDrugInteractions a owl:DatatypeProperty ;
+    rdfs:label "hasDrugInteractions" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMedicationAdherence a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationAdherence" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAppointmentReminder a owl:DatatypeProperty ;
+    rdfs:label "hasAppointmentReminder" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:boolean .
+
+:hasPatientEducationResource a owl:DatatypeProperty ;
+    rdfs:label "hasPatientEducationResource" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasResearchStudyParticipation a owl:DatatypeProperty ;
+    rdfs:label "hasResearchStudyParticipation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:boolean .
+
+:hasBiopsyResult a owl:DatatypeProperty ;
+    rdfs:label "hasBiopsyResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurvivorshipPlan a owl:DatatypeProperty ;
+    rdfs:label "hasSurvivorshipPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAlternativeTherapy a owl:DatatypeProperty ;
+    rdfs:label "hasAlternativeTherapy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasExerciseRecommendation a owl:DatatypeProperty ;
+    rdfs:label "hasExerciseRecommendation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTreatmentResponse a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentResponse" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasClinicalOutcome a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalOutcome" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasCancerSupportProgram a owl:DatatypeProperty ;
+    rdfs:label "hasCancerSupportProgram" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasHealthcareProxy a owl:ObjectProperty ;
+    rdfs:label "hasHealthcareProxy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PatientAdvocate .
+
+:hasAdvanceDirective a owl:DatatypeProperty ;
+    rdfs:label "hasAdvanceDirective" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPatientSatisfactionScore a owl:DatatypeProperty ;
+    rdfs:label "hasPatientSatisfactionScore" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:integer .
+
+:hasCaregiverRole a owl:ObjectProperty ;
+    rdfs:label "hasCaregiverRole" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Caregiver .
+
+:hasPatientAdvocate a owl:ObjectProperty ;
+    rdfs:label "hasPatientAdvocate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PatientAdvocate .
+
+
+
+# Object Properties
+:hasPrimaryPhysician a owl:ObjectProperty ;
+    rdfs:label "hasPrimaryPhysician" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasReferringPhysician a owl:ObjectProperty ;
+    rdfs:label "hasReferringPhysician" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasPathologist a owl:ObjectProperty ;
+    rdfs:label "hasPathologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Pathologist .
+
+:hasRadiologist a owl:ObjectProperty ;
+    rdfs:label "hasRadiologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Radiologist .
+
+:hasOncologist a owl:ObjectProperty ;
+    rdfs:label "hasOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasSurgicalOncologist a owl:ObjectProperty ;
+    rdfs:label "hasSurgicalOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasRadiationOncologist a owl:ObjectProperty ;
+    rdfs:label "hasRadiationOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasNurseSpecialist a owl:ObjectProperty ;
+    rdfs:label "hasNurseSpecialist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Nurse .
+
+:hasSocialWorker a owl:ObjectProperty ;
+    rdfs:label "hasSocialWorker" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :SocialWorker .
+
+:hasNutritionist a owl:ObjectProperty ;
+    rdfs:label "hasNutritionist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Nutritionist .
+
+:hasGeneticCounselor a owl:ObjectProperty ;
+    rdfs:label "hasGeneticCounselor" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :GeneticCounseling .
+
+:hasPalliativeCareProvider a owl:ObjectProperty ;
+    rdfs:label "hasPalliativeCareProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareSpecialist .
+
+:hasHospiceCareProvider a owl:ObjectProperty ;
+    rdfs:label "hasHospiceCareProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareSpecialist .
+
+:hasHealthcareProxy a owl:ObjectProperty ;
+    rdfs:label "hasHealthcareProxy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PatientAdvocate .
+
+:hasCaregiverRole a owl:ObjectProperty ;
+    rdfs:label "hasCaregiverRole" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Caregiver .
+
+
+
+# Classes
+:CancerPatient a owl:Class ;
+    rdfs:label "CancerPatient" .
+
+:Tumor a owl:Class ;
+    rdfs:label "Tumor" .
+
+:FamilyHistory a owl:Class ;
+    rdfs:label "FamilyHistory" .
+
+:Diagnosis a owl:Class ;
+    rdfs:label "Diagnosis" .
+
+:Symptom a owl:Class ;
+    rdfs:label "Symptom" .
+
+:Treatment a owl:Class ;
+    rdfs:label "Treatment" .
+
+:Chemotherapy a owl:Class ;
+    rdfs:label "Chemotherapy" .
+
+:RadiationTherapy a owl:Class ;
+    rdfs:label "RadiationTherapy" .
+
+:Surgery a owl:Class ;
+    rdfs:label "Surgery" .
+
+:PalliativeCare a owl:Class ;
+    rdfs:label "PalliativeCare" .
+
+:ClinicalTrial a owl:Class ;
+    rdfs:label "ClinicalTrial" .
+
+:GeneticTesting a owl:Class ;
+    rdfs:label "GeneticTesting" .
+
+:Biomarker a owl:Class ;
+    rdfs:label "Biomarker" .
+
+:Prognosis a owl:Class ;
+    rdfs:label "Prognosis" .
+
+:PathologyReport a owl:Class ;
+    rdfs:label "PathologyReport" .
+
+:MedicalImage a owl:Class ;
+    rdfs:label "MedicalImage" .
+
+:Oncologist a owl:Class ;
+    rdfs:label "Oncologist" .
+
+:Radiologist a owl:Class ;
+    rdfs:label "Radiologist" .
+
+:Pathologist a owl:Class ;
+    rdfs:label "Pathologist" .
+
+:Nurse a owl:Class ;
+    rdfs:label "Nurse" .
+
+:SupportGroup a owl:Class ;
+    rdfs:label "SupportGroup" .
+
+:HealthInsurance a owl:Class ;
+    rdfs:label "HealthInsurance" .
+
+:PalliativeCareSpecialist a owl:Class ;
+    rdfs:label "PalliativeCareSpecialist" .
+
+:ResearchStudy a owl:Class ;
+    rdfs:label "ResearchStudy" .
+
+:MedicalDevice a owl:Class ;
+    rdfs:label "MedicalDevice" .
+
+:ClinicalGuideline a owl:Class ;
+    rdfs:label "ClinicalGuideline" .
+
+:Rehabilitation a owl:Class ;
+    rdfs:label "Rehabilitation" .
+
+:Screening a owl:Class ;
+    rdfs:label "Screening" .
+
+:FollowUp a owl:Class ;
+    rdfs:label "FollowUp" .
+
+:SideEffect a owl:Class ;
+    rdfs:label "SideEffect" .
+
+:LifestyleModification a owl:Class ;
+    rdfs:label "LifestyleModification" .
+
+:PalliativeCarePlan a owl:Class ;
+    rdfs:label "PalliativeCarePlan" .
+
+:PalliativeCareTeam a owl:Class ;
+    rdfs:label "PalliativeCareTeam" .
+
+:Caregiver a owl:Class ;
+    rdfs:label "Caregiver" .
+
+:SurvivorshipProgram a owl:Class ;
+    rdfs:label "SurvivorshipProgram" .
+
+:IntegrativeTherapy a owl:Class ;
+    rdfs:label "IntegrativeTherapy" .
+
+:PainManagement a owl:Class ;
+    rdfs:label "PainManagement" .
+
+:Nutritionist a owl:Class ;
+    rdfs:label "Nutritionist" .
+
+:GeneticCounseling a owl:Class ;
+    rdfs:label "GeneticCounseling" .
+
+:Psychotherapy a owl:Class ;
+    rdfs:label "Psychotherapy" .
+
+:SocialWorker a owl:Class ;
+    rdfs:label "SocialWorker" .
+
+:PatientAdvocate a owl:Class ;
+    rdfs:label "PatientAdvocate" .
+
+:RiskFactor a owl:Class ;
+    rdfs:label "RiskFactor" .
+
+:EnvironmentalFactor a owl:Class ;
+    rdfs:label "EnvironmentalFactor" .
+
+:CancerStage a owl:Class ;
+    rdfs:label "CancerStage" .
+
+:Metastasis a owl:Class ;
+    rdfs:label "Metastasis" .
+
+:Recurrence a owl:Class ;
+    rdfs:label "Recurrence" .
+
+:Comorbidity a owl:Class ;
+    rdfs:label "Comorbidity" .
+
+:PalliativeCareFacility a owl:Class ;
+    rdfs:label "PalliativeCareFacility" .
+
+:ClinicalTrialsRegistry a owl:Class ;
+    rdfs:label "ClinicalTrialsRegistry" .
+
+
+
+# Datatype Properties
+:hasName a owl:DatatypeProperty ;
+    rdfs:label "hasName" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAge a owl:DatatypeProperty ;
+    rdfs:label "hasAge" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:integer .
+
+:hasGender a owl:DatatypeProperty ;
+    rdfs:label "hasGender" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAddress a owl:DatatypeProperty ;
+    rdfs:label "hasAddress" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPhoneNumber a owl:DatatypeProperty ;
+    rdfs:label "hasPhoneNumber" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasEmail a owl:DatatypeProperty ;
+    rdfs:label "hasEmail" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDateOfBirth a owl:DatatypeProperty ;
+    rdfs:label "hasDateOfBirth" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasBloodType a owl:DatatypeProperty ;
+    rdfs:label "hasBloodType" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasWeight a owl:DatatypeProperty ;
+    rdfs:label "hasWeight" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:decimal .
+
+:hasHeight a owl:DatatypeProperty ;
+    rdfs:label "hasHeight" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:decimal .
+
+:hasBMI a owl:DatatypeProperty ;
+    rdfs:label "hasBMI" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:decimal .
+
+:hasSmokingHistory a owl:DatatypeProperty ;
+    rdfs:label "hasSmokingHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAlcoholConsumption a owl:DatatypeProperty ;
+    rdfs:label "hasAlcoholConsumption" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDrugAllergies a owl:DatatypeProperty ;
+    rdfs:label "hasDrugAllergies" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMedicalHistory a owl:DatatypeProperty ;
+    rdfs:label "hasMedicalHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMedicationHistory a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasFamilyHistory a owl:DatatypeProperty ;
+    rdfs:label "hasFamilyHistory" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :FamilyHistory .
+
+:hasPrimaryPhysician a owl:DatatypeProperty ;
+    rdfs:label "hasPrimaryPhysician" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPathologist a owl:DatatypeProperty ;
+    rdfs:label "hasPathologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Pathologist .
+
+:hasRadiologist a owl:DatatypeProperty ;
+    rdfs:label "hasRadiologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Radiologist .
+
+:hasOncologist a owl:DatatypeProperty ;
+    rdfs:label "hasOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasSurgicalOncologist a owl:DatatypeProperty ;
+    rdfs:label "hasSurgicalOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasRadiationOncologist a owl:DatatypeProperty ;
+    rdfs:label "hasRadiationOncologist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Oncologist .
+
+:hasNurseSpecialist a owl:DatatypeProperty ;
+    rdfs:label "hasNurseSpecialist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Nurse .
+
+:hasSocialWorker a owl:DatatypeProperty ;
+    rdfs:label "hasSocialWorker" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :SocialWorker .
+
+:hasNutritionist a owl:DatatypeProperty ;
+    rdfs:label "hasNutritionist" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Nutritionist .
+
+:hasGeneticCounselor a owl:DatatypeProperty ;
+    rdfs:label "hasGeneticCounselor" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :GeneticCounseling .
+
+:hasPainLevel a owl:DatatypeProperty ;
+    rdfs:label "hasPainLevel" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSymptomSeverity a owl:DatatypeProperty ;
+    rdfs:label "hasSymptomSeverity" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDiagnosisDate a owl:DatatypeProperty ;
+    rdfs:label "hasDiagnosisDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasPrimaryDiagnosis a owl:DatatypeProperty ;
+    rdfs:label "hasPrimaryDiagnosis" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSecondaryDiagnosis a owl:DatatypeProperty ;
+    rdfs:label "hasSecondaryDiagnosis" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorType a owl:DatatypeProperty ;
+    rdfs:label "hasTumorType" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorSize a owl:DatatypeProperty ;
+    rdfs:label "hasTumorSize" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorGrade a owl:DatatypeProperty ;
+    rdfs:label "hasTumorGrade" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTumorLocation a owl:DatatypeProperty ;
+    rdfs:label "hasTumorLocation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasLymphNodeInvolvement a owl:DatatypeProperty ;
+    rdfs:label "hasLymphNodeInvolvement" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMetastasisLocation a owl:DatatypeProperty ;
+    rdfs:label "hasMetastasisLocation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTreatmentPlan a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTreatmentStartDate a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentStartDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasTreatmentEndDate a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentEndDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasChemotherapyRegimen a owl:DatatypeProperty ;
+    rdfs:label "hasChemotherapyRegimen" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasRadiationDose a owl:DatatypeProperty ;
+    rdfs:label "hasRadiationDose" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurgeryType a owl:DatatypeProperty ;
+    rdfs:label "hasSurgeryType" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurgicalProcedureDate a owl:DatatypeProperty ;
+    rdfs:label "hasSurgicalProcedureDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasPostoperativeComplications a owl:DatatypeProperty ;
+    rdfs:label "hasPostoperativeComplications" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPalliativeCarePlan a owl:DatatypeProperty ;
+    rdfs:label "hasPalliativeCarePlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCarePlan .
+
+:hasClinicalTrialParticipation a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialParticipation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:boolean .
+
+:hasClinicalTrialIdentifier a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialIdentifier" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasBiomarkerTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasBiomarkerTestResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasGeneticTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasGeneticTestResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPrognosis a owl:DatatypeProperty ;
+    rdfs:label "hasPrognosis" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasFollowUpAppointment a owl:DatatypeProperty ;
+    rdfs:label "hasFollowUpAppointment" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasRecurrenceStatus a owl:DatatypeProperty ;
+    rdfs:label "hasRecurrenceStatus" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMetastasisStatus a owl:DatatypeProperty ;
+    rdfs:label "hasMetastasisStatus" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurvivalRate a owl:DatatypeProperty ;
+    rdfs:label "hasSurvivalRate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPalliativeCareProvider a owl:DatatypeProperty ;
+    rdfs:label "hasPalliativeCareProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PalliativeCareSpecialist .
+
+:hasSupportGroupMeetingDate a owl:DatatypeProperty ;
+    rdfs:label "hasSupportGroupMeetingDate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:date .
+
+:hasInsuranceProvider a owl:DatatypeProperty ;
+    rdfs:label "hasInsuranceProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :HealthInsurance .
+
+:hasInsurancePolicyNumber a owl:DatatypeProperty ;
+    rdfs:label "hasInsurancePolicyNumber" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasRehabilitationProgram a owl:DatatypeProperty ;
+    rdfs:label "hasRehabilitationProgram" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :Rehabilitation .
+
+:hasScreeningTestResult a owl:DatatypeProperty ;
+    rdfs:label "hasScreeningTestResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSideEffectSeverity a owl:DatatypeProperty ;
+    rdfs:label "hasSideEffectSeverity" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSideEffectManagementStrategy a owl:DatatypeProperty ;
+    rdfs:label "hasSideEffectManagementStrategy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDietaryRestrictions a owl:DatatypeProperty ;
+    rdfs:label "hasDietaryRestrictions" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasExerciseRoutine a owl:DatatypeProperty ;
+    rdfs:label "hasExerciseRoutine" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasEmotionalSupport a owl:DatatypeProperty ;
+    rdfs:label "hasEmotionalSupport" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasFinancialAssistance a owl:DatatypeProperty ;
+    rdfs:label "hasFinancialAssistance" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:boolean .
+
+:hasRiskFactor a owl:DatatypeProperty ;
+    rdfs:label "hasRiskFactor" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :RiskFactor .
+
+:hasExposureToCarcinogens a owl:DatatypeProperty ;
+    rdfs:label "hasExposureToCarcinogens" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasEnvironmentalPollutionLevel a owl:DatatypeProperty ;
+    rdfs:label "hasEnvironmentalPollutionLevel" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasCancerStage a owl:DatatypeProperty ;
+    rdfs:label "hasCancerStage" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :CancerStage .
+
+:hasTNMClassification a owl:DatatypeProperty ;
+    rdfs:label "hasTNMClassification" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasRecurrenceRisk a owl:DatatypeProperty ;
+    rdfs:label "hasRecurrenceRisk" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasComorbidity a owl:DatatypeProperty ;
+    rdfs:label "hasComorbidity" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPainManagementPlan a owl:DatatypeProperty ;
+    rdfs:label "hasPainManagementPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PainManagement .
+
+:hasMedicationSchedule a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationSchedule" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPhysicalTherapyPlan a owl:DatatypeProperty ;
+    rdfs:label "hasPhysicalTherapyPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPsychotherapySession a owl:DatatypeProperty ;
+    rdfs:label "hasPsychotherapySession" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasHospiceCareProvider a owl:DatatypeProperty ;
+    rdfs:label "hasHospiceCareProvider" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDiseaseProgression a owl:DatatypeProperty ;
+    rdfs:label "hasDiseaseProgression" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasClinicalTrialsEnrollmentStatus a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalTrialsEnrollmentStatus" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasDrugInteractions a owl:DatatypeProperty ;
+    rdfs:label "hasDrugInteractions" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasMedicationAdherence a owl:DatatypeProperty ;
+    rdfs:label "hasMedicationAdherence" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:boolean .
+
+:hasAppointmentReminder a owl:DatatypeProperty ;
+    rdfs:label "hasAppointmentReminder" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:boolean .
+
+:hasPatientEducationResource a owl:DatatypeProperty ;
+    rdfs:label "hasPatientEducationResource" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasResearchStudyParticipation a owl:DatatypeProperty ;
+    rdfs:label "hasResearchStudyParticipation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :ResearchStudy .
+
+:hasBiopsyResult a owl:DatatypeProperty ;
+    rdfs:label "hasBiopsyResult" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasSurvivorshipPlan a owl:DatatypeProperty ;
+    rdfs:label "hasSurvivorshipPlan" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAlternativeTherapy a owl:DatatypeProperty ;
+    rdfs:label "hasAlternativeTherapy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasExerciseRecommendation a owl:DatatypeProperty ;
+    rdfs:label "hasExerciseRecommendation" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasTreatmentResponse a owl:DatatypeProperty ;
+    rdfs:label "hasTreatmentResponse" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasClinicalOutcome a owl:DatatypeProperty ;
+    rdfs:label "hasClinicalOutcome" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasCancerSupportProgram a owl:DatatypeProperty ;
+    rdfs:label "hasCancerSupportProgram" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasHealthcareProxy a owl:DatatypeProperty ;
+    rdfs:label "hasHealthcareProxy" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasAdvanceDirective a owl:DatatypeProperty ;
+    rdfs:label "hasAdvanceDirective" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPatientSatisfactionScore a owl:DatatypeProperty ;
+    rdfs:label "hasPatientSatisfactionScore" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:integer .
+
+:hasCaregiverRole a owl:DatatypeProperty ;
+    rdfs:label "hasCaregiverRole" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range xsd:string .
+
+:hasPatientAdvocate a owl:DatatypeProperty ;
+    rdfs:label "hasPatientAdvocate" ;
+    rdfs:domain :CancerPatient ;
+    rdfs:range :PatientAdvocate .
